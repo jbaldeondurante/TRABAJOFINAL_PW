@@ -1,7 +1,25 @@
 import React from 'react';
 import ProductList from '../components/ProductList';
 import InfoBoxes from '../components/InfoBoxes';
+import ImageGallery from '../components/ImageGallery';
 
+const images1 = [
+  '/images/zodiaco1.jpg',
+  '/images/zodiaco2.jpg',
+  '/images/zodiaco3.jpg'
+];
+
+const images2 = [
+  '/images/freezer2.jpg',
+  '/images/vegetta1.jpg',
+  '/images/gokukid1.jpg'
+];
+
+const images3 = [
+  '/images/naruto1.jpg',
+  '/images/midoriya1.jpg',
+  '/images/luffy1.jpg'
+];
 
 const products = [
   { id: 1, name: 'S.H.Figuarts FRIEZA FULL POWER', price: 30.00, imageUrl: '/images/freezer1.jpg' },
@@ -12,9 +30,16 @@ const products = [
   { id: 6, name: 'S.H.Figuarts PORTGAS D. ACE -Fire Fist-', price: 30.00, imageUrl: '/images/portgas1.jpg' }
 ];
 
+
+
 const LandingPage = () => {
   return (
-    <div>
+    <div className="landing-page">
+      <div className="image-section">
+        <ImageGallery images={images1} />
+        <ImageGallery images={images2} />
+        <ImageGallery images={images3} />
+      </div>
       <ProductList products={products} />
       <InfoBoxes />
     </div>
@@ -22,4 +47,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-

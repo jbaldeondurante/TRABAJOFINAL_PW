@@ -30,6 +30,11 @@ header nav ul li a {
 }
 
 /* Estilos para la sección de productos */
+.center-title {
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-bottom: 20px; /* Añade margen inferior para separar el título de los productos */
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -270,4 +275,66 @@ header {
 .header-bottom .dropdown li a {
   text-decoration: none;
   color: #333;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.image-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 28%; /* Ajusta el tamaño según sea necesario */
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.nav-button {
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-button.prev {
+  left: 10px; /* Posicionar la flecha izquierda dentro de la imagen */
+}
+
+.nav-button.next {
+  right: 10px; /* Posicionar la flecha derecha dentro de la imagen */
+}
+
+
+.product-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px 0;
+}
+
+.info-boxes {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px 0;
 }
