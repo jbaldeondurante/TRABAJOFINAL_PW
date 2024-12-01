@@ -1,38 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProductList from '../components/ProductList';
 import InfoBoxes from '../components/InfoBoxes';
 import ImageGallery from '../components/ImageGallery';
+import { images1, images2, images3, products } from '../mockData';
 
-const images1 = [
-  '/images/zodiaco1.jpg',
-  '/images/zodiaco2.jpg',
-  '/images/zodiaco3.jpg'
-];
+const LandingPage = ({ searchTerm }) => {
+  const [cartItems, setCartItems] = useState([]);
 
-const images2 = [
-  '/images/freezer2.jpg',
-  '/images/vegetta1.jpg',
-  '/images/gokukid1.jpg'
-];
+  const handleAddToCart = (product) => {
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((item) => item.id === product.id);
+      if (existingItem) {
+        return prevItems.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+      } else {
+        return [...prevItems, { ...product, quantity: 1 }];
+      }
+    });
+  };
 
-const images3 = [
-  '/images/naruto1.jpg',
-  '/images/midoriya1.jpg',
-  '/images/luffy1.jpg'
-];
+  const handleUpdateQuantity = (productId, quantity) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === productId ? { ...item, quantity: Math.max(1, quantity) } : item
+      )
+    );
+  };
 
-const products = [
-  { id: 1, name: 'S.H.Figuarts FRIEZA FULL POWER', price: 30.00, imageUrl: '/images/freezer1.jpg' },
-  { id: 2, name: 'Myth Cloth EX PANDORA', price: 50.00, imageUrl: '/images/expandora1.jpg' },
-  { id: 3, name: 'S.H.Figuarts PAIN TENDO -Six Path Rinnegan-', price: 30.00, imageUrl: '/images/paintendo1.jpg' },
-  { id: 4, name: 'SAINT CLOTH MYTH EX PEGASUS SEIYA [GOD CLOTH]', price: 70.00, imageUrl: '/images/pegasus1.jpg' },
-  { id: 5, name: 'S.H.Figuarts TRUNKS-GT-', price: 30.00, imageUrl: '/images/trunksgt1.jpg' },
-  { id: 6, name: 'S.H.Figuarts PORTGAS D. ACE -Fire Fist-', price: 30.00, imageUrl: '/images/portgas1.jpg' }
-];
+  const handleRemoveItem = (productId) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== productId));
+  };
 
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-
-const LandingPage = () => {
   return (
     <div className="landing-page">
       <div className="image-section">
@@ -40,7 +43,7 @@ const LandingPage = () => {
         <ImageGallery images={images2} />
         <ImageGallery images={images3} />
       </div>
-      <ProductList products={products} />
+      <ProductList products={filteredProducts} onAddToCart={handleAddToCart} />
       <InfoBoxes />
     </div>
   );
