@@ -436,3 +436,42 @@ header {
 .product-detail button:hover {
   background-color: #0056b3;
 }
+
+/* Estilos para la página de detalle del producto */
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.cart-page img {
+  width: 300px;  /* Ajusta el ancho de la imagen */
+  height: auto;  /* Mantén la proporción de la imagen */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.cart-pagel h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cart-page p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cart-page button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-page button:hover {
+  background-color: #0056b3;
+}

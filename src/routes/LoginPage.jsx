@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-const LoginPage = () => {
+const LoginPage = ({ handleLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí se puede añadir la lógica de autenticación simulada
-    console.log('Iniciando sesión con:', email, password);
+    handleLogin({ email, password });
   };
 
   return (

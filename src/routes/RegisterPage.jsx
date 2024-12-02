@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 
-const RegisterPage = () => {
+const RegisterPage = ({ handleRegister }) => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí se puede añadir la lógica de registro simulada
-    console.log('Registrándose con:', username, email, password);
+    handleRegister({ username, email, password });
   };
 
   return (

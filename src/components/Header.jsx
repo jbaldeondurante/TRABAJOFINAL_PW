@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = ({ onSearch, cartItemCount }) => {
+const Header = ({ onSearch, cartItemCount, user, logout }) => {
   const [showStockDropdown, setShowStockDropdown] = useState(false);
   const [showPreventasDropdown, setShowPreventasDropdown] = useState(false);
 
@@ -22,9 +22,10 @@ const Header = ({ onSearch, cartItemCount }) => {
         <div className="header-links">
           <nav>
             <ul>
-              <li><Link to="/register">Regístrate Aquí</Link></li>
-              <li><Link to="/login">Iniciar Sesión</Link></li>
-              <li><Link to="/account">Mi Cuenta</Link></li>
+              {!user && <li><Link to="/register">Regístrate Aquí</Link></li>}
+              {!user && <li><Link to="/login">Iniciar Sesión</Link></li>}
+              {user && <li><Link to="/account">Mi Cuenta</Link></li>}
+              {user && <li><button onClick={logout}>Cerrar Sesión</button></li>}
               <li>
                 <Link to="/cart">
                   <img src='/images/carrito.png' alt="Carrito" className="cart-icon" /> {cartItemCount}
@@ -34,7 +35,7 @@ const Header = ({ onSearch, cartItemCount }) => {
           </nav>
           <div className="social-icons">
             <a href="#"><img src='/images/facebook_logo.png' alt="Facebook" /></a>
-            <a href="#"><img src='//images/instagram_logo.png' alt="Instagram" /></a>
+            <a href="#"><img src='/images/instagram_logo.png' alt="Instagram" /></a>
             <a href="#"><img src='/images/tiktok_logo.png' alt="TikTok" /></a>
           </div>
         </div>
