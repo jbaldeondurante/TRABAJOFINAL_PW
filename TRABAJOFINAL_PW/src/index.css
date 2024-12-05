@@ -1,0 +1,477 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: #fff; /* Aseguramos que el color del texto sea blanco */
+  text-decoration: none;
+}
+
+/* Estilos para la sección de productos */
+.center-title {
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-bottom: 20px; /* Añade margen inferior para separar el título de los productos */
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.product h2 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product p {
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Estilos para las cajas informativas */
+.info-boxes {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.info-box {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease;
+}
+
+.info-box:hover {
+  background-color: #f1f1f1;
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.info-box a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-section h3 {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 10px 0;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a img,
+.whatsapp-icon a img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Estilos para el header */
+header {
+  background-color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-box button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.header-links nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-links nav ul li {
+  display: inline; /* Aseguramos que los ítems sean inline */
+}
+
+.header-links nav ul li a {
+  text-decoration: none;
+  color: #fff; /* Cambiamos el color del texto a blanco */
+  display: flex;
+  align-items: center;
+}
+
+.header-links nav ul li a img.cart-icon {
+  width: 20px;  /* Ajustado para que coincida con otros íconos */
+  height: 20px; /* Ajustado para que coincida con otros íconos */
+  margin-right: 5px;
+}
+
+.header-links .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.header-links .social-icons a img {
+  width: 20px;  /* Ajuste también estos valores */
+  height: 20px; /* Ajuste también estos valores */
+}
+
+.header-bottom {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.header-bottom ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-bottom ul li {
+  position: relative;
+}
+
+.header-bottom ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.header-bottom ul li .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.header-bottom ul li:hover .dropdown {
+  display: block;
+}
+
+.header-bottom .dropdown li {
+  padding: 10px;
+}
+
+.header-bottom .dropdown li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.image-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 28%; /* Ajusta el tamaño según sea necesario */
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.nav-button {
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-button.prev {
+  left: 10px; /* Posicionar la flecha izquierda dentro de la imagen */
+}
+
+.nav-button.next {
+  right: 10px; /* Posicionar la flecha derecha dentro de la imagen */
+}
+
+
+.product-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px 0;
+}
+
+.info-boxes {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px 0;
+}
+
+/* Estilos para el carrito de compras */
+.cart {
+  padding: 20px;
+}
+
+.cart h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cart .cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart .cart-item img {
+  width: 80px; /* Ajusta el ancho de la imagen */
+  height: 80px; /* Ajusta la altura de la imagen */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cart .cart-item h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.cart .cart-item p {
+  font-size: 1rem;
+  color: #888;
+  margin: 0;
+}
+
+.cart .cart-item div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart .cart-item button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart .cart-item button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para la página de detalle del producto */
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-detail img {
+  width: 300px;  /* Ajusta el ancho de la imagen */
+  height: auto;  /* Mantén la proporción de la imagen */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.product-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.product-detail p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.product-detail button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-detail button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para la página de detalle del producto */
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.cart-page img {
+  width: 300px;  /* Ajusta el ancho de la imagen */
+  height: auto;  /* Mantén la proporción de la imagen */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.cart-pagel h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cart-page p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cart-page button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-page button:hover {
+  background-color: #0056b3;
+}
