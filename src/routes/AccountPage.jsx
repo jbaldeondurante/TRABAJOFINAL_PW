@@ -56,7 +56,6 @@ const AccountPage = ({ user, handleUpdateProfile, orders }) => {
         {userOrders.map(order => (
           <li key={order.id}>
             <strong>Producto:</strong> {order.product} <br />
-            <strong>Cantidad:</strong> {order.quantity} <br />
             <strong>Fecha:</strong> {order.date}
           </li>
         ))}
